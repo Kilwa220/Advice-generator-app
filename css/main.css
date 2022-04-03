@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+/* START GLOBALE VARIABLE */
+:root {
+  --clr-light-cyan: hsl(193, 38%, 86%);
+  --clr-neon-green: hsl(150, 100%, 66%);
+  --clr-grayish-blue: hsl(217, 19%, 38%);
+  --clr-dark-grayish-blue: hsl(217, 19%, 24%);
+  --clr-dark-blue: hsl(218, 23%, 16%);
+}
+/* END GLOBALE VARIABLE */
+
+/* START COMPENANTE */
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 975px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* END COMPENANTE */
+
+/* START BODY */
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--clr-dark-blue);
+}
+/* END BODY */
+
+/* START  MAIN*/
+main {
+  min-height: 100vh;
+}
+
+main .container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .container .advice {
+  text-align: center;
+  background-color: var(--clr-dark-grayish-blue);
+  position: relative;
+  padding: 40px 18px 60px 18px;
+  max-width: 475px;
+  line-height: 1.5;
+  border-radius: 15px;
+}
+
+@media (min-width: 768px) {
+  main .container .advice {
+    padding: 40px 30px 60px 30px;
+  }
+}
+
+main .container .advice > * {
+  display: block;
+}
+
+main .advice span {
+  color: var(--clr-neon-green);
+}
+
+main .container .advice q {
+  position: relative;
+  font-size: 28px;
+  color: var(--clr-light-cyan);
+  margin: 30px 0 30px;
+}
+
+main .advice > img {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  main .advice > img {
+    content: url(../images/pattern-divider-desktop.svg);
+  }
+}
+
+main .advice button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: var(--clr-neon-green);
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+  display: grid !important;
+  place-content: center;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+main .advice button:hover {
+  background-color: white;
+}
+/* END MAIN */
+/* START FOOTER */
+footer:not(.main-footer) {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  font-size: 12px;
+}
+
+footer:not(.main-footer) p {
+  color: white;
+}
+
+footer:not(.main-footer) p a {
+  color: var(--clr-neon-green);
+  text-decoration: none;
+}
+
+footer:not(.main-footer) p a:focus,
+footer:not(.main-footer) p a:hover {
+  color: var(--clr-neon-green);
+}
+footer:not(.main-footer) p i {
+  color: red;
+  font-size: 14px;
+}
+/* END FOOTER */
